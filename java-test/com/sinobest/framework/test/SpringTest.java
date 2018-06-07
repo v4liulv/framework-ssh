@@ -11,7 +11,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
-import javax.transaction.Transactional;
 import java.util.List;
 
 /**
@@ -29,7 +28,6 @@ public class SpringTest {
     private DictionariesService dictionariesService;
 
     @Test
-    @Transactional
     @Rollback(false)  //标明使用完此方法后事务不回滚,true时为回滚
     public void testSave() {
         System.out.println("测试Spring整合Junit4进行单元测试");
@@ -40,7 +38,6 @@ public class SpringTest {
     }
 
     @Test
-    @Transactional
     public void dictionariesTest() {
         List<Dictionaries> bEDITOREDITList = dictionariesService.getByField("Dictionaries", "KIND", "ARTICLE_TYPE", "order by CODE");
     }
