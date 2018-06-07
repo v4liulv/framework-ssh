@@ -17,7 +17,7 @@ public class OracleTest {
         } catch (InstantiationException | IllegalAccessException e) {
             e.printStackTrace();
         }
-        System.out.println("1111111233333333") ;
+        System.out.println("Oracle Driver connection Succession.") ;
     }
 
 }

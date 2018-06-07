@@ -1,4 +1,4 @@
-package com.sinobest.kshfx.webservice.servers.neo4j;
+package com.sinobest.framework.webservice.servers.neo4j;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;

@@ -1,6 +1,5 @@
 package com.sinobest.framework.utils;
 
-import com.sinobest.framework.domain.BGxkshSjfx;
 import com.sinobest.framework.base.service.BaseService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -35,8 +34,8 @@ public class FrmeworkUtil<T> {
 
 
     public static void main(String[] args) {
-        BGxkshSjfx bGxkshGnzypzb = (BGxkshSjfx) new FrmeworkUtil<BGxkshSjfx>().getEntityListByHql("0401");
-        System.out.println(String.valueOf(bGxkshGnzypzb));
+        /*BGxkshSjfx bGxkshGnzypzb = (BGxkshSjfx) new FrmeworkUtil<BGxkshSjfx>().getEntityListByHql("0401");
+        System.out.println(String.valueOf(bGxkshGnzypzb));*/
     }
 
 }

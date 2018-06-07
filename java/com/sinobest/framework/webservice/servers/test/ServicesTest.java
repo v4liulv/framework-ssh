@@ -1,4 +1,4 @@
-package com.sinobest.kshfx.webservice.servers.test;
+package com.sinobest.framework.webservice.servers.test;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;

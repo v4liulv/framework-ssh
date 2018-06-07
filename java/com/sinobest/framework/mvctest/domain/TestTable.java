@@ -1,4 +1,4 @@
-package com.sinobest.kshfx.mvctest.domain;
+package com.sinobest.framework.mvctest.domain;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;

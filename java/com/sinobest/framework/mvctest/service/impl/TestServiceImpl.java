@@ -1,9 +1,9 @@
-package com.sinobest.kshfx.mvctest.service.impl;
+package com.sinobest.framework.mvctest.service.impl;
 
 import com.sinobest.framework.base.service.impl.BaseServiceImpl;
-import com.sinobest.kshfx.mvctest.dao.TestDao;
-import com.sinobest.kshfx.mvctest.domain.TestTable;
-import com.sinobest.kshfx.mvctest.service.TestService;
+import com.sinobest.framework.mvctest.dao.TestDao;
+import com.sinobest.framework.mvctest.domain.TestTable;
+import com.sinobest.framework.mvctest.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;

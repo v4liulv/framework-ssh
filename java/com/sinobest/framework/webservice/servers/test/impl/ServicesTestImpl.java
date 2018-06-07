@@ -1,10 +1,10 @@
-package com.sinobest.kshfx.webservice.servers.test.impl;
+package com.sinobest.framework.webservice.servers.test.impl;
 
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 import javax.jws.soap.SOAPBinding.Style;
 
-import com.sinobest.kshfx.webservice.servers.test.ServicesTest;
+import com.sinobest.framework.webservice.servers.test.ServicesTest;
 import org.springframework.stereotype.Service;
 
 /**

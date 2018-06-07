@@ -1,8 +1,8 @@
-package com.sinobest.kshfx.mvctest.dao;
+package com.sinobest.framework.mvctest.dao;
 
 
 import com.sinobest.framework.base.dao.BaseDao;
-import com.sinobest.kshfx.mvctest.domain.TestTable;
+import com.sinobest.framework.mvctest.domain.TestTable;
 
 /**
  * Created by Administrator on 2016/11/6 0006.

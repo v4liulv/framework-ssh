@@ -1,6 +1,7 @@
 package com.sinobest.framework.test;
 
 import com.sinobest.framework.utils.JdbcService;
+import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -36,27 +37,27 @@ public class JDBCTest {
 //myBeanImpl是在Spring中注册的MyBean实现类的name或id
     }
 
-    @org.junit.Test
+    @Test
     public void JdbcServiceTest1(){
         ApplicationContext context = init();
         JdbcService jdbcService = new JdbcService().getInstance(context);
 
-        String sql = "select ID,NAME from Test where id = ?";
+        String sql = "select ID,NAME,SEX from SSH_TEST where ID = ? ";
         String id = "1";
         List<Map<String, Object>> list = jdbcService.getJdbcTemplate().queryForList(sql,new Object[]{id}, new int[] {Types.VARCHAR });
         for(Map<String, Object> line : list){
-            System.out.println(line.get("ID") + ":" + line.get("NAME"));
+            System.out.println(line.get("NAME") + ":" + line.get("SEX"));
         }
     }
 
-    //@org.junit.Test
+    @Test
     public void JdbcServiceTest2(){
         ApplicationContext context = init();
         JdbcService jdbcService = new JdbcService().getInstance(context);
 
-        String sql = "select ID,NAME from Test where id = ? and name = ? ";
-        String id = "4028a3815d323d61015d325a1d8f0000";
-        String name = "liulv111111122221111312";
+        String sql = "select ID,NAME from SSH_TEST where id = ? and name = ? ";
+        String id = "002FCC8E2F324CA3B8BCAE520C5FEB7B";
+        String name = "刘律";
         List<Map<String, Object>> list = jdbcService.getJdbcTemplate().queryForList(sql,new Object[]{id, name}, new int[] {Types.VARCHAR, Types.VARCHAR});
         for(Map<String, Object> line : list){
             System.out.println(line.get("ID") + ":" + line.get("NAME"));

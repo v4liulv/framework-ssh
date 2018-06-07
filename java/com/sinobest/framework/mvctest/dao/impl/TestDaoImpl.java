@@ -1,8 +1,8 @@
-package com.sinobest.kshfx.mvctest.dao.impl;
+package com.sinobest.framework.mvctest.dao.impl;
 
 import com.sinobest.framework.base.dao.impl.BaseDaoImpl;
-import com.sinobest.kshfx.mvctest.dao.TestDao;
-import com.sinobest.kshfx.mvctest.domain.TestTable;
+import com.sinobest.framework.mvctest.dao.TestDao;
+import com.sinobest.framework.mvctest.domain.TestTable;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 

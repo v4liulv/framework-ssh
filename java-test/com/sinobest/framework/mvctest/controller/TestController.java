@@ -1,7 +1,6 @@
 package com.sinobest.framework.mvctest.controller;
 
 import com.sinobest.framework.base.service.BaseService;
-import com.sinobest.framework.domain.BGxkshSjfx;
 import com.sinobest.framework.mvctest.model.TestTable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,9 +22,6 @@ public class TestController {
     @Resource(name="baseService")
     //private TestService testService;
     private BaseService<TestTable> testBaseService;
-
-    @Resource(name="baseService")
-    private BaseService<BGxkshSjfx> bGxkshGnzypzbBaseService;
 
     @RequestMapping("adds")
     public String toAddUser(List<TestTable> tests){
@@ -54,16 +50,6 @@ public class TestController {
         String tableName = "Test";
          List<TestTable> tests = testBaseService.getAllEntity(tableName);
         String name = tests.get(0).getName();
-        System.out.println("get All name " + name);
-        //request.setAttribute("testList", testService.getAllEntity(tableName));
-        return "main";
-    }
-
-    @RequestMapping("getAllBGxkshGnzypzb")
-    public String getAllBGxkshGnzypzb(HttpServletRequest request){
-        String tableName = "BGxkshGnzypzb";
-        List<BGxkshSjfx> tests = bGxkshGnzypzbBaseService.getAllEntity(tableName);
-        String name = tests.get(0).getSystemid();
         System.out.println("get All name " + name);
         //request.setAttribute("testList", testService.getAllEntity(tableName));
         return "main";

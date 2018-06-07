@@ -1,4 +1,4 @@
-package com.sinobest.kshfx.webservice.client;
+package com.sinobest.framework.webservice.client;
 
 /**
  * Created by liulv on 2017/6/22.

@@ -21,8 +21,8 @@
     <context:component-scan base-package="
     com.sinobest.framework.dao,
     com.sinobest.framework.service,
-    com.sinobest.kshfx.mvctest.dao,
-    com.sinobest.kshfx.mvctest.service," />
+    com.sinobest.sshtest.mvctest.dao,
+    com.sinobest.sshtest.mvctest.service," />
 
     <!-- spring JAX-WS  发布webservice -->
     <!-- *************************************************************************************************** -->
@@ -41,7 +41,7 @@
 
 
     <!-- 这种集成方式所发布的WebService是一种独立的WebService -->
-    <context:component-scan base-package="com.sinobest.kshfx.webservice.servers" />
+    <context:component-scan base-package="com.sinobest.webservice.servers" />
     <!-- test com.sinobest.kshfx.webservice -->
     <wss:binding url="/services/test" >
         <wss:service>
@@ -49,7 +49,7 @@
         </wss:service>
     </wss:binding>
 
-    <!-- Neo4j com.sinobest.kshfx.webservice -->
+    <!-- Neo4j com.sinobest.webservice -->
    <!-- <wss:binding url="/services/neo4j" >
         <wss:service>
             <ws:service bean="#neo4jServices" />
