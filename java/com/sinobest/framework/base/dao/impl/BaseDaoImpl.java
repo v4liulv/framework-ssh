@@ -67,7 +67,6 @@ public class BaseDaoImpl<T> implements BaseDao<T>
         return sessionFactory;
     }
 
-
     protected Session getSession(){
         return sessionFactoryOracle.getCurrentSession();
     }

@@ -64,8 +64,10 @@
         </property>
         <property name="packagesToScan"> <!--自动扫描注解方式配置的hibernate类文件-->
             <list>
-                <value>com.sinobest.framework.domain</value>
-                <value>com.sinobest.framework.mvctest.domain</value>
+                <!-- 字典 -->
+                <value>com.sinobest.framework.dictionaries.mvc.domain</value>
+                <!-- mvctest -->
+                <value>com.sinobest.framework.test.mvc.domain</value>
             </list>
         </property>
     </bean>

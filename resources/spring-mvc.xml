@@ -14,10 +14,12 @@
     <!-- 注解扫描包 -->
     <!-- 扫描web包，应用Spring的注解 @Controller -->
     <context:component-scan base-package="com.sinobest.*.*.web" />
-    <context:component-scan base-package="com.sinobest.framework.*.mvc.controller" />
+    <context:component-scan base-package="com.sinobest.*.*.controller" />
     <!-- 扫描业务层service实现类 -->
-    <context:component-scan base-package="com.sinobest.framework.*.mvc.service" />
-    <context:component-scan base-package="com.sinobest.framework.*.mvc.dao" />
+    <context:component-scan base-package="com.sinobest.*.*.service" />
+    <context:component-scan base-package="com.sinobest.*.*.mvc.service" />
+    <context:component-scan base-package="com.sinobest.*.*.dao" />
+    <context:component-scan base-package="com.sinobest.*.*.mvc.dao" />
     <!-- 开启mvc注解 -->
     <mvc:annotation-driven />
 
