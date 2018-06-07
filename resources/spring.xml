@@ -20,9 +20,11 @@
     <!-- 自动扫描dao和service包(自动注入) -->
     <context:component-scan base-package="
     com.sinobest.framework.dao,
+    com.sinobest.framework.dictionaries.mvc.dao,
+    com.sinobest.framework.dictionaries.mvc.service,
     com.sinobest.framework.service,
-    com.sinobest.sshtest.mvctest.dao,
-    com.sinobest.sshtest.mvctest.service," />
+    com.sinobest.framework.mvctest.dao,
+    com.sinobest.framework.mvctest.service" />
 
     <!-- spring JAX-WS  发布webservice -->
     <!-- *************************************************************************************************** -->
@@ -41,7 +43,7 @@
 
 
     <!-- 这种集成方式所发布的WebService是一种独立的WebService -->
-    <context:component-scan base-package="com.sinobest.webservice.servers" />
+    <context:component-scan base-package="com.sinobest.framework.webservice.servers" />
     <!-- test com.sinobest.kshfx.webservice -->
     <wss:binding url="/services/test" >
         <wss:service>
