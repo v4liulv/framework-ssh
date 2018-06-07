@@ -1,0 +1,54 @@
+package com.sinobest.kshfx.webservice.servers.neo4j.impl;
+
+import com.sinobest.kshfx.webservice.servers.neo4j.Neo4jWebServices;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by liulv on 2017/6/23.
+ *
+ * Neo4j 发布 com.sinobest.kshfx.webservice 操作的实现类
+ */
+@Service(value = "neo4jServices")
+@WebService
+// 防止jdk版本问题
+@SOAPBinding(style= SOAPBinding.Style.RPC)
+public class Neo4jWebServicesImpl implements Neo4jWebServices
+{
+    @Resource(name="personService")
+    /*private PersonService personService;*/
+
+    //ArrayList也不能做为webserver的返回值，因为它不支持序列化
+    @Override
+    public Integer createNodesOfPerson(String personsQqbw)
+    {
+     /*  List<Person> persons = new ArrayList<>();
+        Person person ;*/
+
+        //解析报文开始
+        //AARBasedWSDLLocator
+/*
+       for(Map<String, String> personMap : personsListMap){
+            String sfzhStr = personMap.get("sfzh");
+            String nameStr = personMap.get("name");
+            if(sfzhStr == null || sfzhStr.equals("") || nameStr == null || nameStr.equals(""))  continue;
+            person = new Person(nameStr, sfzhStr);
+            persons.add(person);
+        }*/
+       /*Integer intRet = personService.createNeo4jPersonByObjectPersons(persons);
+        if(intRet== null) return 0;
+        return intRet;*/
+       return null;
+    }
+
+    @Override
+    public String queryNeo4jProvideTheInterfaces(String queryCypher){
+        /*return personService.queryNeo4jProvideTheInterfaces(queryCypher);*/
+        return "12";
+    }
+}
