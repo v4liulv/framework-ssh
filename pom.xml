@@ -227,6 +227,22 @@
             <artifactId>jackson-mapper-asl</artifactId>
             <version>${org.codehaus.jackson.version}</version>
         </dependency>
+        <!-- springMvc进行json解析jackson依赖包 -->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-jaxrs</artifactId>
+            <version>${org.codehaus.jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${com.fasterxml.jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${com.fasterxml.jackson.version}</version>
+        </dependency>
         <!-- spring5 end -->
 
     </dependencies>
