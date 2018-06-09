@@ -45,12 +45,6 @@ public class BaseDaoImpl<T> implements BaseDao<T>
         }
     }
 
-   /* public BaseDaoImpl() {
-        ParameterizedType type = (ParameterizedType) this.getClass().getGenericSuperclass();
-        entityClass = (Class<T>) type.getActualTypeArguments()[0];
-        System.out.println("DAO的真实实现类是：" + this.entityClass.getName());
-    }*/
-
    private static SessionFactory getSessionFactory()
     {
         SessionFactory sessionFactory = null;
