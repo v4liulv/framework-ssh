@@ -82,7 +82,7 @@ public class BaseEntity{
         this.updateTime = updateTime;
     }
 
-    @Column(name = "UPDATE_TIME", updatable = false, insertable = false)
+    @Column(name = "UPDATE_TIME", insertable = false)
     public LocalDateTime getUpdateTime() {
         return updateTime;
     }
@@ -91,7 +91,7 @@ public class BaseEntity{
         this.scbz = scbz;
     }
 
-    @Column(name = "SCBZ", updatable = false, length = 2)
+    @Column(name = "SCBZ", length = 2)
     public long getScbz() {
         return scbz;
     }

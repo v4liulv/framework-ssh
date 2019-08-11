@@ -22,12 +22,12 @@
 
         <servlet.version>3.0-alpha-1</servlet.version>
         <hibernate.version>5.2.11.Final</hibernate.version>
-        <spring.version>5.0.2.RELEASE</spring.version>
+        <spring.version>5.0.8.RELEASE</spring.version>
         <jaxws-rt-version>2.2.8</jaxws-rt-version>
         <axws-spring-version>1.9</axws-spring-version>
         <aspectjweaver.version>1.7.1</aspectjweaver.version>
         <org.codehaus.jackson.version>1.9.13</org.codehaus.jackson.version>
-        <com.fasterxml.jackson.version>2.9.2</com.fasterxml.jackson.version>
+        <com.fasterxml.jackson.version>2.9.9</com.fasterxml.jackson.version>
 
 
         <currentYear>2018</currentYear>
@@ -69,17 +69,6 @@
     </repositories>
 
     <dependencies>
-        <!-- <dependency>
-         <groupId>com.sinobest.kshfx</groupId>
-         <artifactId>kshfx-core</artifactId>
-         <version>${project.version}</version>
-         <exclusions>
-             <exclusion>
-                 <groupId>org.springframework</groupId>
-                 <artifactId>*</artifactId>
-             </exclusion>
-         </exclusions>
-     </dependency>-->
         <dependency>
             <groupId>com.sinobest</groupId>
             <artifactId>framework-core</artifactId>
