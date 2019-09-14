@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * Created by Administrator on 2016/11/6 0006.
  */
-@Transactional(value = "transactionManagerOracle")
+@Transactional()
 @Repository(value = "testDao")
 public class TestDaoImpl extends BaseDaoImpl<SshTest> implements TestDao {
 

@@ -1,8 +1,11 @@
 package com.sinobest.framework.base.service;
 
 
+import com.sinobest.framework.base.domain.DataTablesEntity;
+
 import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by liulv on 2016/11/5 0005.
@@ -66,11 +69,36 @@ public interface BaseService<T> {
      */
     public List<T> getByHQL(String hql, Object... params);
 
+    public List<T> findByHQLNative(String hql,Class<T> entityType, Object... params);
+
+    /**
+     * Hql 语句查询 limit
+     */
+    public List<T> getByHQLLimit(String hql,int limit, Object... params);
+
+    public List<T> getByHQLLimit1(String hql,int first, int max, Object... params);
+
     /**
      *  获取所有的实体类对象T
      *
      * @return  list<T>
      */
     public List<T> getAllEntity(String tableName);
+
+    public List<T> getAllEntityPage(String tableName, Integer startNum, Integer endNum);
+
+    public List<T> getAllEntityPageParams(String tableName, Integer startNum, Integer endNum, String params);
+
+    /**
+     * 根据DataTables前端传递封装成dtEntity对象，查询请求后端数据，并返回封装好的数据给到dt前端
+     *
+     * @param dtEntity 实体类继承DataTablesEntity
+     * @param tableOrSql 表名或查询SQL,不能为空
+     * @param entityClass 解析实体类对象Class
+     * @return 返回封装好的数据给到dt前端
+     */
+    public Map<String, Object> queryByDataTablesBase(DataTablesEntity dtEntity,
+                                                     String tableOrSql,
+                                                     Class<T> entityClass);
 
 }

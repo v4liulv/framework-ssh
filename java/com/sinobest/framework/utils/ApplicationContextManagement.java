@@ -17,6 +17,7 @@ public class ApplicationContextManagement implements ApplicationContextAware{
     public static ApplicationContext getApplicationContext(){
         return appContext;
     }
+
     public void setApplicationContext(ApplicationContext applicationContext)
             throws BeansException {
         this.appContext = applicationContext;

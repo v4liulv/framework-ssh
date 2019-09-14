@@ -49,7 +49,7 @@
     <!-- 配置hibernate session工厂 -->
     <!--<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">-->
 
-   <bean id="sessionFactoryOracle" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+   <bean id="sessionFactoryJdbc" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <property name="hibernateProperties">
             <props>
@@ -73,8 +73,8 @@
     </bean>
 
     <!-- 配置Hibernate事务管理器 命名为 transactionManagerOracle 是为了区分spring-neo4j的或者其他数据库的事务注解 > -->
-    <bean id="transactionManagerOracle" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
-        <property name="sessionFactory" ref="sessionFactoryOracle" />
+    <bean id="transactionManagerJdbc" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactoryJdbc" />
     </bean>
 
     <!-- 配置事务异常封装 -->
@@ -82,7 +82,7 @@
           class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
 
     <!-- 开启事务方式一： 注解方式配置事务， 支持事务注解的(@Transactional)， 推荐方式-->
-    <tx:annotation-driven transaction-manager="transactionManagerOracle" />
+    <tx:annotation-driven transaction-manager="transactionManagerJdbc" />
 
     <!-- 事务配置方式三： 拦截器方式配置事物 -->
    <!-- <tx:advice id="transactionAdvice" transaction-manager="transactionManagerOracle">

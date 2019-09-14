@@ -79,5 +79,15 @@ public interface BaseDao<T> {
     public List<T> getAllEntity(String tableName);
 
 
+    public List<T> findByHQLNative(String hql, Class<T> entityType, Object... params);
+
+    public List<T> findByHQLLimit(String hql, int limit, Object... params);
+
+    public List<T> findByHQLLimit(String hql, int first, int max, Object... params);
+
+    public List<T> getAllEntityPage(String tableName, Integer startNum, Integer endNum);
+
+    public List<T> getAllEntityPageParams(String tableName, Integer startNum, Integer endNum, String ohq, Object... params);
+
 
 }

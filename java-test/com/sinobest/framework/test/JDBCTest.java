@@ -18,7 +18,7 @@ public class JDBCTest {
 
     private ApplicationContext init(){
         //String paths[] = {"spring-hibernate.xml", "spring.xml"};
-        String paths[] = {"spring-jdbc-service.xml"};
+        String paths[] = {"spring.xml","spring-hibernate.xml"};
 //这个xml文件是Spring配置beans的文件，顺带一提，路径 在整个应用的根目录
         return new ClassPathXmlApplicationContext(paths);
     }

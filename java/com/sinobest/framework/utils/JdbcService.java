@@ -1,7 +1,6 @@
 package com.sinobest.framework.utils;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.jdbc.support.lob.LobHandler;
@@ -15,6 +14,7 @@ import java.util.Map;
  *  JDBC服务类
  */
 public class JdbcService<T> extends JdbcDaoSupport implements IJdbcService {
+    private final static String JDBC_SERVICE_BEAN_APP_NAME = "appJdbcService";
     private LobHandler lobHandler;
 
     /**
@@ -172,17 +172,25 @@ public class JdbcService<T> extends JdbcDaoSupport implements IJdbcService {
         this.lobHandler = lobHandler;
     }
 
-    public JdbcService<T> getInstance(){
+
+    public JdbcService<T> getInstance(String beanName){
+        if(beanName == null) beanName = JDBC_SERVICE_BEAN_APP_NAME;
         ApplicationContext context = ApplicationContextManagement.getApplicationContext();
-        if(context==null){
-            String paths[] = {"spring-jdbc-service.xml"};
-            //这个xml文件是Spring配置beans的文件，顺带一提，路径 在整个应用的根目录
-            context =  new ClassPathXmlApplicationContext(paths);
-        }
-        return (JdbcService<T>)context.getBean("appJdbcService");
+        return (JdbcService<T>)context.getBean(beanName);
     }
 
     public JdbcService<T> getInstance(ApplicationContext context){
-        return (JdbcService<T>)context.getBean("appJdbcService");
+        return getInstance(context, null);
     }
+
+    public JdbcService<T> getInstance(ApplicationContext context, String beanName){
+        if(beanName == null) beanName = JDBC_SERVICE_BEAN_APP_NAME;
+        return (JdbcService<T>)context.getBean(beanName);
+    }
+
+    public JdbcService<T> getInstance(){
+        return getInstance((String) null);
+    }
+
+
 }
