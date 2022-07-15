@@ -27,7 +27,7 @@
         <axws-spring-version>1.9</axws-spring-version>
         <aspectjweaver.version>1.7.1</aspectjweaver.version>
         <org.codehaus.jackson.version>1.9.13</org.codehaus.jackson.version>
-        <com.fasterxml.jackson.version>2.9.6</com.fasterxml.jackson.version>
+        <com.fasterxml.jackson.version>2.12.6.1</com.fasterxml.jackson.version>
 
         <currentYear>2018</currentYear>
         <ipprefix>127.0.1.</ipprefix>
