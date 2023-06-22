@@ -49,13 +49,22 @@
             </snapshots>
         </repository>
         <!-- 本地版本库 -->
-        <repository>
+       <!-- <repository>
             <id>maven-local</id>
-            <url>D:\libs\maven\</url>
+            <url>C:\doc\maven_lib\</url>
+        </repository>-->
+
+        <repository>
+            <id>maven-repo-master</id>
+            <url>https://github.com/v4liulv/maven-repo/tree/master</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
         </repository>
 
         <!-- 我自己的GitHub版本库 -->
-        <repository>
+       <!-- <repository>
             <id>maven-repo-master</id>
             <url>https://raw.githubusercontent.com/v4liulv/maven-repo/master</url>
             <releases>
@@ -64,7 +73,7 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
-        </repository>
+        </repository>-->
     </repositories>
 
     <dependencies>
