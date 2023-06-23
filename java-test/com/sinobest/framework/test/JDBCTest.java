@@ -42,9 +42,9 @@ public class JDBCTest {
         ApplicationContext context = init();
         JdbcService jdbcService = new JdbcService().getInstance(context);
 
-        String sql = "select ID,NAME,SEX from SSH_TEST where ID = ? ";
-        String id = "1";
-        List<Map<String, Object>> list = jdbcService.getJdbcTemplate().queryForList(sql,new Object[]{id}, new int[] {Types.VARCHAR });
+        String sql = "select ID,NAME,SEX from SSH_TEST where NAME = ? ";
+        String name = "liulv";
+        List<Map<String, Object>> list = jdbcService.getJdbcTemplate().queryForList(sql,new Object[]{name}, new int[] {Types.VARCHAR });
         for(Map<String, Object> line : list){
             System.out.println(line.get("NAME") + ":" + line.get("SEX"));
         }

@@ -33,7 +33,9 @@ public class SpringTest {
         System.out.println("测试Spring整合Junit4进行单元测试");
 
         SshTest sshTest = new SshTest();
-        sshTest.setName("liulv2");
+        sshTest.setName("liulv");
+        sshTest.setAge(18L);
+        sshTest.setSex("男");
         testService.save(sshTest);
     }
 
