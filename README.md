@@ -2,6 +2,23 @@
 
 # SSH框架使用
 
+## 测试
+
+**需创建测试库**
+
+注意不管是oracle还是mysql数据库需先创建数据库，hibernate.hbm2ddl.auto配置为create表会根据实体表自动创建但是库需要先创建
+```sql
+create database sshd;
+```
+
+![img.png](img.png)
+
+**resources配置调整**
+
+发布到 github 需要注释到 pom 文件中build > resources 中配置，如测试则需要此配置不然resources 中 spring 配置文件无法打包到classes中
+
+执行测试可以执行SpringTest.testSave
+
 ## Maven依赖添加
 Maven的pom文件添加
 

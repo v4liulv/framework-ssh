@@ -57,11 +57,19 @@
         <repository>
             <id>maven-repo-master</id>
             <url>https://github.com/v4liulv/maven-repo/tree/master</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
             </snapshots>
         </repository>
+
+      <!--  <repository>
+            <id>maven-repo1</id>
+            <url>https://raw.github.com/v4liulv/maven-repo1/mvn-repo/</url>
+        </repository>-->
 
         <!-- 我自己的GitHub版本库 -->
        <!-- <repository>
@@ -250,8 +258,8 @@
         <sourceDirectory>java</sourceDirectory>
         <testSourceDirectory>java-test</testSourceDirectory>
 
-        <!--maven打包时如何把包下面的非java文件配置文件也包含，通过resources-resource下配置directory和includes实现 -->
-       <!-- <resources>
+        <!--注意：提交到githhub maven库需要注释掉项目根据实际情况配置ssh配置，maven打包时如何把包下面的非java文件配置文件也包含，通过resources-resource下配置directory和includes实现 -->
+        <resources>
             <resource>
                 <directory>resources</directory>
                 <includes>
@@ -268,7 +276,7 @@
                     <include>**/*.dtd</include>
                 </includes>
             </resource>
-        </resources>-->
+        </resources>
 
         <plugins>
             <!-- Maven github 可选 -->
@@ -279,7 +287,7 @@
                 <configuration>
                     <message>Maven artifacts for ${project.version}</message>
                     <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
-                    <branch>refs/heads/master</branch>
+                    <branch>refs/heads/mvn-repo</branch>
                     <includes>
                         <include>**</include>
                     </includes>
@@ -291,7 +299,7 @@
                     <!-- 在该站点的根目录下是否总是创造一个.nojekyll文件将。如果您的站点包含任何以下划线开头的文件夹，那么该设置应该启用。-->
                     <noJekyll>true</noJekyll>
                     <!-- 对应github上创建的仓库名称 name -->
-                    <repositoryName>maven-repo</repositoryName>
+                    <repositoryName>maven-repo1</repositoryName>
                     <!-- github 仓库所有者 -->
                     <repositoryOwner>v4liulv</repositoryOwner>
                 </configuration>
