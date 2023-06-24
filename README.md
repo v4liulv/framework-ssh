@@ -192,7 +192,7 @@ public interface TestDao extends BaseDao<SshTest> {
 DAO实现类TestDaoImpl继承BaseDaoImpl<SshTest>，并实现TestDao,事务开启和
 
 ```java
-@Transactional(value = "transactionManagerOracle")
+@Transactional(value = "transactionManagerJdbc")
 @Repository(value = "testDao")
 public class TestDaoImpl extends BaseDaoImpl<SshTest> implements TestDao{
 }
